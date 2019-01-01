@@ -9,6 +9,10 @@ ranging = ranger()
 
 ranging.test()
 ranging.startRanging(1)
+
 while True:
-    print(ranging.getDistance())
-ranging.stopRanging()
+    try:
+        print(ranging.getDistance())
+    except KeyboardInterrupt:
+        print("Stopping ranging")
+        ranging.stopRanging()

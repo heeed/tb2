@@ -1,4 +1,5 @@
-#robot.oy
+#testRobot.py
+# Move robot forward,back,left and right
 
 from libraries.robot import robot as robot
 from time import sleep
