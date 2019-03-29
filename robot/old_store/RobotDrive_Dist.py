@@ -8,7 +8,7 @@ from libraries.robot import Robot as robot
 from time import sleep
 import sys
 
-brian = robot("TB2","brian")
+brian = robot("sts","brian")
 print(brian.robotType)
 print(brian.robotName)
 
