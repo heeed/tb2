@@ -1,0 +1,164 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Raspberry_Pi_2_3 J1
+U 1 1 5C7ED889
+P 2450 2550
+F 0 "J1" H 2450 4028 50  0000 C CNN
+F 1 "Raspberry Pi Zero W" H 2450 3937 50  0000 C CNN
+F 2 "" H 2450 2550 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 2450 2550 50  0001 C CNN
+	1    2450 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Raspberry_Pi_2_3 J2
+U 1 1 5C7ED9F4
+P 4950 2600
+F 0 "J2" H 4950 4078 50  0000 C CNN
+F 1 "Pi juice" H 4950 3987 50  0000 C CNN
+F 2 "" H 4950 2600 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 4950 2600 50  0001 C CNN
+	1    4950 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 850  1100 1250
+Wire Wire Line
+	1100 1250 2250 1250
+Wire Wire Line
+	1100 850  4750 850 
+Wire Wire Line
+	4750 850  4750 1300
+$Comp
+L Driver_Motor:L293D U?
+U 1 1 5C7EDB92
+P 4950 6150
+F 0 "U?" H 4950 7328 50  0000 C CNN
+F 1 "L293D" H 4950 7237 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 5200 5400 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/l293.pdf" H 4650 6850 50  0001 C CNN
+	1    4950 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_Motor:L293D U?
+U 1 1 5C7EDEAE
+P 2350 6200
+F 0 "U?" H 2350 7378 50  0000 C CNN
+F 1 "L293D" H 2350 7287 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 2600 5450 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/l293.pdf" H 2050 6900 50  0001 C CNN
+	1    2350 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 5150 5050 4600
+Wire Wire Line
+	5050 4600 2450 4600
+Wire Wire Line
+	2450 4600 2450 5200
+Wire Wire Line
+	2250 5200 2250 4900
+Wire Wire Line
+	2250 4900 4850 4900
+Wire Wire Line
+	4850 4900 4850 5150
+Wire Wire Line
+	1100 1250 1100 5200
+Wire Wire Line
+	1100 5200 2250 5200
+Connection ~ 1100 1250
+Connection ~ 2250 5200
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5C7EEDAD
+P 3200 5650
+F 0 "J?" H 3280 5642 50  0000 L CNN
+F 1 "Motor1" H 3280 5551 50  0000 L CNN
+F 2 "" H 3200 5650 50  0001 C CNN
+F 3 "~" H 3200 5650 50  0001 C CNN
+	1    3200 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 5800 3000 5800
+Wire Wire Line
+	3000 5800 3000 5750
+Wire Wire Line
+	3000 5650 3000 5600
+Wire Wire Line
+	2850 5600 3000 5600
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5C7EF31D
+P 3200 6250
+F 0 "J?" H 3280 6242 50  0000 L CNN
+F 1 "Motor2" H 3280 6151 50  0000 L CNN
+F 2 "" H 3200 6250 50  0001 C CNN
+F 3 "~" H 3200 6250 50  0001 C CNN
+	1    3200 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 6400 3000 6400
+Wire Wire Line
+	3000 6400 3000 6350
+Wire Wire Line
+	3000 6250 3000 6200
+Wire Wire Line
+	2850 6200 3000 6200
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5C7EF5AB
+P 5750 5600
+F 0 "J?" H 5830 5592 50  0000 L CNN
+F 1 "Motor3" H 5830 5501 50  0000 L CNN
+F 2 "" H 5750 5600 50  0001 C CNN
+F 3 "~" H 5750 5600 50  0001 C CNN
+	1    5750 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 5750 5550 5750
+Wire Wire Line
+	5550 5750 5550 5700
+Wire Wire Line
+	5550 5600 5550 5550
+Wire Wire Line
+	5400 5550 5550 5550
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5C7EF7F1
+P 5800 6200
+F 0 "J?" H 5880 6192 50  0000 L CNN
+F 1 "Motor4" H 5880 6101 50  0000 L CNN
+F 2 "" H 5800 6200 50  0001 C CNN
+F 3 "~" H 5800 6200 50  0001 C CNN
+	1    5800 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 6350 5600 6350
+Wire Wire Line
+	5600 6350 5600 6300
+Wire Wire Line
+	5600 6200 5600 6150
+Wire Wire Line
+	5450 6150 5600 6150
+Wire Bus Line
+	750  750  750  7050
+$EndSCHEMATC
