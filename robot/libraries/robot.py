@@ -43,6 +43,7 @@ class Robot():
             self.motorA = Motor(self.motorA1,self.motorA2)
             self.motorB = Motor(self.motorB1,self.motorB2)
         elif self.robotType == 'tb2':
+            print("tb2 setup")
             bus.write_byte_data(DEVICE,IODIRA,0x00)
             bus.write_byte_data(DEVICE,OLATA,0)
 
@@ -52,7 +53,7 @@ class Robot():
             self.motorA.forward()
             self.motorB.forward()
             print("Forward")
-        elif self.robotType == 'TB2':
+        elif self.robotType == 'tb2':
             bus.write_byte_data(DEVICE,OLATA,self.direction["forward"])
     
     def backwards(self):
@@ -60,31 +61,31 @@ class Robot():
             self.motorA.backward()
             self.motorB.backward()
             print("backward")
-	elif self.robotType == 'TB2':
-	    bus.write_byte_data(DEVICE,OLATA,self.direction["backwards"])
+        elif self.robotType == 'tb2':
+            bus.write_byte_data(DEVICE,OLATA,self.direction["backwards"])
 
     def left(self):
         if self.robotType == 'sts':
             self.motorA.forward()
             self.motorB.backward()
             print("left")
-	elif self.robotType == 'TB2':
-	    bus.write_byte_data(DEVICE,OLATA,self.direction["left"])   
-
+        elif self.robotType == 'tb2':
+            bus.write_byte_data(DEVICE,OLATA,self.direction["left"])
+    
     def right(self):
         if self.robotType == 'sts':
             self.motorA.backward()
             self.motorB.forward()
             print('right')
-	elif self.robotType == 'TB2':
-	    bus.write_byte_data(DEVICE,OLATA,self.direction["right"])
+        elif self.robotType == 'tb2':
+            bus.write_byte_data(DEVICE,OLATA,self.direction["right"])
 
     def stop(self):
         if self.robotType == 'sts':
             self.motorA.stop()
             self.motorB.stop()
             print('stop')
-        elif self.robotType == 'TB2':
+        elif self.robotType == 'tb2':
             bus.write_byte_data(DEVICE,OLATA,0b00000000)
 
     def readchar(self):

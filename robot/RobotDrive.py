@@ -8,7 +8,7 @@ from libraries.robot import Robot as robot
 from time import sleep
 import sys
 
-brian = robot("TB2","brian")
+brian = robot("tb2","brian")
 print(brian.robotType)
 print(brian.robotName)
 
@@ -31,8 +31,8 @@ while True:
         print(keyp)
         sleep(0.1)
     except KeyboardInterrupt:
-    #    pass
+        pass
     #finally:
-        print("Quiting and closing down")
-        #brian.stop()
-        #sys.exit()
+    #  print("Quiting and closing down")
+    #  brian.stop()
+    #  sys.exit()
